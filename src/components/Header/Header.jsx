@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <Container>
       <a href="https://www.tesla.com/pl_pl">
-        <img src="/images/logo.svg" alt="logo" height="20px" />
+        <img src="/images/logo.svg" alt="logo" height="15px" width="100px" />
       </a>
       <Menu>
         {cars.map(item => (

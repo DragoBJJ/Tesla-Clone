@@ -12,7 +12,6 @@ import {
   DownArrow,
   Buttons
 } from "./styledSection";
-import zIndex from "@material-ui/core/styles/zIndex";
 
 const Section = ({ title, description, img, leftBtn, rightBtn }) => {
   return (
