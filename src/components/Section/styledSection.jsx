@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import modelS from "../../assets/images/model-s.jpg";
 
 export const Wrap = styled.div`
   display: flex;

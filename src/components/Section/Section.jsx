@@ -1,4 +1,6 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
+
 import {
   Wrap,
   ItemText,
@@ -10,22 +12,26 @@ import {
   DownArrow,
   Buttons
 } from "./styledSection";
-
-import downArrow from "../../assets/images/downArrow.svg";
+import zIndex from "@material-ui/core/styles/zIndex";
 
 const Section = ({ title, description, img, leftBtn, rightBtn }) => {
   return (
     <Wrap img={img}>
-      <ItemText>
-        <Header>{title}</Header>
-        <HeaderDesc>{description}</HeaderDesc>
-      </ItemText>
+      <Fade bottom>
+        <ItemText>
+          <Header>{title}</Header>
+          <HeaderDesc>{description}</HeaderDesc>
+        </ItemText>
+      </Fade>
+
       <Buttons>
-        <ButtonsWrapper btns={rightBtn}>
-          <LeftButton>{leftBtn}</LeftButton>
-          {rightBtn && <RightButton>{rightBtn}</RightButton>}
-        </ButtonsWrapper>
-        <DownArrow src={downArrow} />
+        <Fade top>
+          <ButtonsWrapper btns={rightBtn}>
+            <LeftButton>{leftBtn}</LeftButton>
+            {rightBtn && <RightButton>{rightBtn}</RightButton>}
+          </ButtonsWrapper>
+        </Fade>
+        <DownArrow src="images/downArrow.svg" />
       </Buttons>
     </Wrap>
   );

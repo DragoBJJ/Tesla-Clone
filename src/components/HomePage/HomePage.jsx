@@ -58,7 +58,7 @@ const HomePage = () => {
   return (
     <Container>
       {teslaData.map(model => (
-        <Section {...model} />
+        <Section key={model.title} {...model} />
       ))}
     </Container>
   );
